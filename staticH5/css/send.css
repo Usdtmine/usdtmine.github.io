@@ -1,0 +1,154 @@
+.bodyMainLeft{
+	width: 100%;
+	margin: 0 auto;
+}
+.bodyMain2{
+	width: 11.17rem;
+	height: 7rem;
+	margin: 0 auto;
+	background: #FFFFFF;
+	box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgba(228, 228, 228, 0.2);
+	border-radius: 0.09rem;
+	border: 0.01rem solid #F2F3F5;
+}
+.bodyMain3{
+	width: 7.33rem;
+	height: 7rem;
+	float: left;
+	background: #FFFFFF;
+	box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgba(228, 228, 228, 0.2);
+	border-radius: 0.09rem;
+	border: 0.01rem solid #F2F3F5;
+}
+.bodyMain4{
+	width: 7.33rem;
+	min-height: 7rem;
+	float: right;
+	background: #FFFFFF;
+	box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgba(228, 228, 228, 0.2);
+	border-radius: 0.09rem;
+	border: 0.01rem solid #F2F3F5;
+}
+.layui-form-label{
+	width: 1.3rem;
+}
+.layui-form{
+	padding-top: 0.5rem;
+}
+.layui-btn{
+	margin-top: 0.5rem;
+}
+.mainTipsBox{
+	width: 5.5rem;
+	margin: 0.7rem auto 0;
+}
+.mainTipsBoxTitle1{
+	font-size: 0.4rem;
+	height: 0.56rem;
+	font-family: .PingFang SC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: #505587;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	line-height: 1;
+	justify-content: center;
+}
+.mainTipsBoxTitle1 .errorImgs{
+	width: 0.38rem;
+	height: 0.38rem;
+	display: block;
+	margin-left: 0.12rem;
+}
+.mainTipsBoxTitle2{
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #505587;
+	text-align: center;
+	line-height: 0.33rem;
+	margin-top: 0.6rem;
+}
+.mainTipsBoxTitle3{
+	margin-top: 0.5rem;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #505587;
+	line-height: 0.412rem;
+}
+.page3Tips{
+	padding: 0 0.15rem;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #364064;
+}
+/* .disabled{
+	background: #C7C7C7;
+	box-shadow: 0rem 0.04rem 0.09rem 0.01rem rgba(0, 0, 0, 0.14901960784313725);
+	border-radius: 0.11rem 0.11rem 0.11rem 0.11rem;
+} */
+.bodyMain4MenuBox{
+	padding: 0.24rem 0;
+	margin: 0 0.5rem;
+	font-size: 0.22rem;
+	font-weight: 600;
+	color: #364064;
+	border-bottom: 1px solid #ECF0F1;
+}
+.bodyMain4MenuBox a{
+	color: #364064;
+}
+.bodyMain4MenuBox a.active{
+	color: #744DFE;
+}
+.bodyMain4MenuBox span{
+	margin: 0 0.1rem;
+}
+.msgListBox{
+	padding: 0 0.5rem 0.2rem;
+}
+.msgListBoxLi{
+	font-size: 0.18rem;
+	font-weight: 400;
+	line-height: 0.32rem;
+	color: #505587;
+	overflow:hidden; 
+	margin-top: 0.2rem;
+}
+.msgListBoxLi .type0{
+	color: #FD4163;
+}
+.msgListBoxLi .type1{
+	color: #6581FF;
+}
+@media screen and (max-width: 700px) {
+	.bodyMainLeft{
+		width: 100%;
+	}
+	.bodyMain2{
+		width: 100%;
+	}
+	.bodyMain3{
+		width: 100%;
+		margin-top: 0.5rem;
+	}
+	.bodyMain4{
+		width: 100%;
+		margin-top: 0.5rem;
+	}
+	.layui-form-label{
+		width: 2.1rem;
+	}
+	.msgListBoxLi{
+		line-height: 0.4rem;
+	}
+	.layui-input-block{
+		margin-left: 2.2rem;
+	}
+	.bodyMain4MenuBox{
+		font-size: 0.28rem;
+	}
+	.msgListBoxLi{
+		font-size: 0.26rem;
+		line-height: 0.45rem;
+	}
+}
