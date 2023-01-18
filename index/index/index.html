@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html><html><head><script type="text/javascript">
+	function initFontSize(){
+		var WIDTH_ = document.getElementsByTagName('html')[0].clientWidth;
+		WIDTH_ = WIDTH_>1920?1920:WIDTH_;
+		if(WIDTH_<700){
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 750 * 100)+'px';
+		}else{
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 1920 * 100)+'px';
+		}
+	}
+	window.onresize = function(){
+		initFontSize()
+	}
+	initFontSize()
+	/*
+	setInterval(function(){
+		initFontSize()
+	},50)
+	*/
+</script><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><title>Usdt market</title><link rel="stylesheet" type="text/css" href="/static/js/layui/css/layui.css"/><link rel="stylesheet" type="text/css" href="/staticH5/css/style.css?v=456"/><script src="/static/js/layui/layui.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
+	var $ = layui.$;
+</script><script>function tfalert(content,title,confirm,type,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	type = type||1;
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg"></div>\
+						<div class="typeStatus type'+type+'"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDing">'+confirm+'</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+function tfConfirm(content,title,confirm,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg" style="display:none;"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDingBox">\
+							<div class="tfAlertBoxQueDing0">Cancel</div>\
+							<div class="tfAlertBoxQueDing1">'+confirm+'</div>\
+						</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing0',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing1',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+</script><script type="text/javascript">
+	layer.msg = function(content){
+		tfalert(content,"Hint","Confirm","2",function(){
+			
+		});
+	}
+	//发送邮箱
+	function sendArray(data,callfunc){
+		layer_load = layer.load();
+		$.ajax({
+			url:'/index/index/mail.html',
+			type:'post',
+			data:data,
+			success : function(result) {
+				layer.close(layer_load);
+				if(callfunc){
+					callfunc();
+				}
+				// location.reload()
+			},
+			//请求失败，包含具体的错误信息
+			error : function(e){
+				layer.close(layer_load);
+				layer.msg('网络连接超时');
+			}
+		})
+	}
+</script><link rel="stylesheet" type="text/css" href="/staticH5/css/index.css"/></head><body><div class="headerBox"><div class="headerBoxTitle">Usdt market</div><div class="headerBoxRightBox"><img src="/staticH5/img/touxiang.png" class="headerBoxRightBoxTouXiang"><div class="headerBoxRightBoxName">AUFD36</div><div class="headerBoxRightBoxhydj"><span></span>vip5<img src="/staticH5/img/vipIcon.png" class="vipIcon"></div><div class="huishu"></div><a class="headerBoxRightBoxhydj messageBox" href="/index/index/send.html"><!-- <img src="/staticH5/img/znx.png" class="messageBoxImg"> -->Notice</a><div class="huishu"></div><!--<a class="tuichuBox" href="/index/index/logout.html"><img src="/staticH5/img/loginOut.png" >Quit</a>--><style>
+                    .language{ position: absolute; left: 0;z-index: 999;background: #fff;padding: 5px 0 0 5px;}
+                    .language li img{ float:left;}
+                    .language li a{ color:#333;}
+                    .language li.active a{ color:#7670d9;}
+                </style><div class="tuichuBox" style="position:relative;width: 1.6rem;"><img src="/static/picture/en-us.jpg"/><div class="lang_btn">English</div><ul class="language" style="display:none"><li class="active"><img src="/static/picture/en-us.jpg"/><a href="/index/index/index.html?lang=en-us">English</a></li><li ><img src="/static/picture/pt-pt.jpg"/><a href="/index/index/index.html?lang=pt-pt">portugu&ecirc;s</a></li><li ><img src="/static/picture/es-es.jpg"/><a href="/index/index/index.html?lang=es-es">espa&ntilde;ol</a></li><li ><img src="/static/picture/tr-tr.jpg"/><a href="/index/index/index.html?lang=tr-tr">T&uuml;rkiye</a></li><li ><img src="/static/picture/yn-yn.jpg"/><a href="/index/index/index.html?lang=yn-yn">Tiếng Việt</a></li><li ><img src="/static/picture/zh-tw.jpg"/><a href="/index/index/index.html?lang=zh-tw">中文繁體</a></li><li ><img src="/static/picture/hg-hg.jpg"/><a href="/index/index/index.html?lang=hg-hg">한국</a></li></ul></div></div><div class="menuBtnBox">
+			    More Features
+			</div></div><div class="LeftMenuBox"><div class="logoBox" style="background-image: url(/upload/20220325173904.logo.png);"></div><div class="LeftMenuBox-Main"><a class="LeftMenuBox-Main-Li" href="/index/index/index.html"><img src="/staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Home</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/chongzhi.html"><img src="/staticH5/img/icon/leftIcon2.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon2-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Recharge</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/tixian.html"><img src="/staticH5/img/icon/leftIcon3.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon3-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Withdraw</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanzhang.html"><img src="/staticH5/img/icon/leftIcon4.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon4-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Member Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shengji.html"><img src="/staticH5/img/icon/leftIcon5.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon5-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Membership Upgrade</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanyi.html"><img src="/staticH5/img/icon/leftIcon6.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon6-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Asset Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/send.html"><img src="/staticH5/img/icon/leftIcon8.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon8-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Customer Service</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shuoming.html"><img src="/staticH5/img/icon/leftIcon9.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Common Problem</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/wailian.html"><img src="/staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Friendship Link</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/logout.html"><img src="/staticH5/img/loginOut.png" class="LeftMenuBox-Main-Li-icon"><img src="/staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Quit</div></a></div></div><script type="text/javascript">
+			$('.menuBtnBox').on('click',function(){
+				if($('.LeftMenuBox').hasClass('active')){
+					$('.LeftMenuBox').removeClass('active');
+				}else{
+					$('.LeftMenuBox').addClass('active');
+				}
+			})
+			$('.LeftMenuBox-Main-Li').on('click',function(){
+				$('.LeftMenuBox').removeClass('active');
+			})
+		</script><script type="text/javascript">
+			$('.LeftMenuBox-Main-Li[href="/index/index/index.html"]').addClass("active");
+			$('.lang_btn').click(function(){
+                 $('.language').toggle();
+             })
+		</script><div class="bodyMain"><div class="bodyMainLeft"><div style="box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgb(228 228 228 / 20%); border-radius: 0.09rem 0.09rem 0.09rem 0.09rem;border: 0.01rem solid #F2F3F5;padding: 0.44rem 0.42rem; margin-bottom:0.2rem;font-weight:bold;">If you have any questions, please use your secure email address to contact the administrator's only contact method Mail: usdteusd@yahoo.com</div><div class="bodyMain1"><div class="bodyMain1Div"><img src="/staticH5/img/touxiang.png" class="touxiang2"><div class="bodyMain1DivName1">AUFD36</div><div class="bodyMain1DivName2">vip5</div><div class="bodyMain1DivName3" >						    (Validity Period：Permanent)
+						</div></div><div class="bodyMain1Div"><div class="bodyMain1DivRightTIle">Available Functions</div><div class="bodyMain1DivSpanBox"><!-- 下方图片dui1是可用的功能dui0是不可用的 --><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Login</div><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Recharge</div><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Withdraw</div><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Transfer</div><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Collection</div><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Asset Transfer</div><div class="bodyMain1DivSpan"><img src="/staticH5/img/dui1.png">Customer Service</div></div></div></div><div class="bodyMain1-2"><div class="bodyMain1-2KaPian lan"><div class="bodyMain1-2KaPianTitle1"><img src="/staticH5/img/index/div2img1.png" >Total Assets(usdt)</div><div class="bodyMain1-2KaPianTitle2">2594736.90</div></div><div class="bodyMain1-2KaPian zi"><div class="bodyMain1-2KaPianTitle1"><img src="/staticH5/img/index/div2img2.png" >Available Balance</div><div class="bodyMain1-2KaPianTitle2">2594736.9</div></div><div class="bodyMain1-2KaPian juhuang"><div class="bodyMain1-2KaPianTitle1"><img src="/staticH5/img/index/div2img3.png" >Freeze Balance</div><div class="bodyMain1-2KaPianTitle2">0.00</div></div></div><div class="bodyMain1-3"><div class="bodyMain1-3Li"><div>Monthly Remaining Collection Amount</div><div>5000000</div></div><div class="bodyMain1-3Li"><div>Daily Remaining Collection Amount</div><div>200000</div></div></div></div><div class="bodyMain2"><div class="tfTitle">Information</div><div class="bodyMain2Li"><img src="/staticH5/img/right1.png" class="bodyMain2LiIcon"><div class="bodyMain2LiTitle1">Wallet Address</div><div class="bodyMain2LiTitle2">0x9A****7db8<a href="/index/index/changeAddress.html" class="xiugaia">Edit</a></div></div><div class="bodyMain2Li"><img src="/staticH5/img/right2.png" class="bodyMain2LiIcon"><div class="bodyMain2LiTitle1">Login Password</div><div class="bodyMain2LiTitle2">a****8<a href="/index/index/changePassword.html" class="xiugaia">Edit</a></div></div><div class="bodyMain2Li"><img src="/staticH5/img/right3.png" class="bodyMain2LiIcon"><div class="bodyMain2LiTitle1">Transaction Key</div><div class="bodyMain2LiTitle2">S****.<!-- <a href="/index/index/changesecretkey.html" class="xiugaia">修改</a> --></div></div><div class="bodyMain2Li"><img src="/staticH5/img/right4.png" class="bodyMain2LiIcon"><div class="bodyMain2LiTitle1">Safe Mailbox</div><div class="bodyMain2LiTitle2">****stmiebi683@gmail.com<!-- <a href="/index/index/changeemail.html" class="xiugaia">修改</a> --></div></div></div><div class="bodyMain3"><div class="tfTitle">public information rolling (50 records of recent successful transactions on the platform)</div><table class="layui-table"><thead><tr><th>user</th><th>amount</th><th>condition</th><th>time</th></tr></thead><tbody><tr><td>y3***</td><td>10.00 USDT</td><td>transfer</td><td>01-15 23:58:15</td></tr><tr><td>5r***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:56:54</td></tr><tr><td>p1***</td><td>10.00 USDT</td><td>recharge</td><td>01-15 23:55:03</td></tr><tr><td>qy***</td><td>11250.00 USDT</td><td>withdraw</td><td>01-15 23:54:52</td></tr><tr><td>7d***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:54:20</td></tr><tr><td>xh***</td><td>26310.00 USDT</td><td>transfer</td><td>01-15 23:51:30</td></tr><tr><td>ai***</td><td>10.00 USDT</td><td>withdraw</td><td>01-15 23:48:41</td></tr><tr><td>4g***</td><td>10.00 USDT</td><td>recharge</td><td>01-15 23:46:00</td></tr><tr><td>1x***</td><td>29280.00 USDT</td><td>transfer</td><td>01-15 23:44:00</td></tr><tr><td>az***</td><td>6390.00 USDT</td><td>transfer</td><td>01-15 23:42:29</td></tr><tr><td>ix***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:42:12</td></tr><tr><td>3n***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:41:29</td></tr><tr><td>ow***</td><td>11350.00 USDT</td><td>transfer</td><td>01-15 23:40:51</td></tr><tr><td>sg***</td><td>10.00 USDT</td><td>transfer</td><td>01-15 23:40:34</td></tr><tr><td>rw***</td><td>10550.00 USDT</td><td>transfer</td><td>01-15 23:40:17</td></tr><tr><td>ze***</td><td>10.00 USDT</td><td>withdraw</td><td>01-15 23:37:47</td></tr><tr><td>uj***</td><td>14210.00 USDT</td><td>withdraw</td><td>01-15 23:36:49</td></tr><tr><td>8p***</td><td>16560.00 USDT</td><td>withdraw</td><td>01-15 23:35:41</td></tr><tr><td>v7***</td><td>13490.00 USDT</td><td>transfer</td><td>01-15 23:33:28</td></tr><tr><td>lo***</td><td>10.00 USDT</td><td>withdraw</td><td>01-15 23:31:22</td></tr><tr><td>rv***</td><td>14130.00 USDT</td><td>transfer</td><td>01-15 23:31:01</td></tr><tr><td>fv***</td><td>11750.00 USDT</td><td>withdraw</td><td>01-15 23:28:57</td></tr><tr><td>a3***</td><td>17420.00 USDT</td><td>withdraw</td><td>01-15 23:27:17</td></tr><tr><td>74***</td><td>9860.00 USDT</td><td>recharge</td><td>01-15 23:25:45</td></tr><tr><td>3i***</td><td>10.00 USDT</td><td>withdraw</td><td>01-15 23:24:46</td></tr><tr><td>16***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:24:28</td></tr><tr><td>7w***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:21:36</td></tr><tr><td>1f***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:19:55</td></tr><tr><td>0m***</td><td>24790.00 USDT</td><td>withdraw</td><td>01-15 23:18:46</td></tr><tr><td>fl***</td><td>19930.00 USDT</td><td>recharge</td><td>01-15 23:17:58</td></tr><tr><td>6e***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:17:03</td></tr><tr><td>8a***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:14:11</td></tr><tr><td>fw***</td><td>27280.00 USDT</td><td>withdraw</td><td>01-15 23:13:25</td></tr><tr><td>96***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:13:09</td></tr><tr><td>kx***</td><td>10.00 USDT</td><td>recharge</td><td>01-15 23:11:47</td></tr><tr><td>0w***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:09:28</td></tr><tr><td>v9***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:07:33</td></tr><tr><td>p4***</td><td>100.00 USDT</td><td>recharge</td><td>01-15 23:05:43</td></tr><tr><td>bz***</td><td>9710.00 USDT</td><td>recharge</td><td>01-15 23:05:03</td></tr><tr><td>gv***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:02:21</td></tr><tr><td>by***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 23:01:58</td></tr><tr><td>p2***</td><td>10.00 USDT</td><td>recharge</td><td>01-15 22:59:11</td></tr><tr><td>1l***</td><td>16320.00 USDT</td><td>recharge</td><td>01-15 22:58:23</td></tr><tr><td>rb***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 22:56:42</td></tr><tr><td>6a***</td><td>13550.00 USDT</td><td>recharge</td><td>01-15 22:56:27</td></tr><tr><td>6h***</td><td>1410.00 USDT</td><td>recharge</td><td>01-15 22:55:42</td></tr><tr><td>q6***</td><td>100.00 USDT</td><td>withdraw</td><td>01-15 22:54:39</td></tr><tr><td>i3***</td><td>100.00 USDT</td><td>transfer</td><td>01-15 22:53:33</td></tr><tr><td>pe***</td><td>2860.00 USDT</td><td>withdraw</td><td>01-15 22:51:55</td></tr><tr><td>8j***</td><td>29480.00 USDT</td><td>withdraw</td><td>01-15 22:50:44</td></tr></tbody></table></div></div><div style="display:none"><!-- Global site tag (gtag.js) - Google Analytics --><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-TGDP23DWDF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TGDP23DWDF');
+</script></div></body></html>
