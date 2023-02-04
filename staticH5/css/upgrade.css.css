@@ -1,0 +1,253 @@
+.bodyMain1{
+	width: 7.33rem;
+	min-height: 3.25rem;
+	padding: 0.46rem 0.42rem;
+	background: #FFFFFF;
+	box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgba(228, 228, 228, 0.2);
+	border-radius: 0.09rem;
+	opacity: 1;
+	border: 0.01rem solid #F2F3F5;
+	float: left;
+}
+.bodyMain1Left{
+	width: 4.6rem;
+	float: left;
+}
+.bodyMain1Left1{
+	width: 100%;
+	float: left;
+}
+.bodyMain1Left1 .touxianga{
+	width: 1.09rem;
+	height: 1.09rem;
+	display: block;
+	float: left;
+	margin-right: 0.25rem;
+}
+.bodyMain1Left1 .nichengBox{
+	float: left;
+	width: calc(100% - 1.36rem);
+}
+.bodyMain1Left1 .nichengBoxTitle1{
+	height: 0.5rem;
+	line-height: 0.5rem;
+	font-size: 0.36rem;
+	font-weight: 600;
+	color: #364064;
+}
+.bodyMain1Left1 .nichengBoxTitle2{
+	line-height: 0.3rem;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #8593C2;
+}
+.bodyMain1Left1 .nichengBoxTitle2 span{
+	display: block;
+	font-size: 0.18rem;
+}
+.bodyMain1Left2{
+	width: 100%;
+	float: left;
+	padding-top: 0.6rem;
+}
+.bodyMain1Left2Icon{
+	width: 0.28rem;
+	height: auto;
+	display: block;
+	float: left;
+	margin-top: 0.05rem;
+}
+.bodyMain1Left2IconRight{
+	width: calc(100% - 0.28rem);
+	float: left;
+	padding-left: 0.1rem;
+}
+.bodyMain1Left2IconRight1{
+	line-height: 0.33rem;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #333333;
+}
+.bodyMain1Left2IconRight1 span{
+	color: #FD4163;
+}
+.bodyMain1Left2IconRight2{
+	font-size: 0.18rem;
+	font-weight: 400;
+	margin-top: 0.1rem;
+	line-height: 0.25rem;
+	color: #8593C2;
+}
+.bodyMain1Left2IconRight2 a{
+	color: #5794FF;
+}
+.bodyMain1Left2IconRight2 a:hover,.bodyMain1Left2IconRight2 a:active{
+	color: #5794FF;
+}
+.bodyMain1Left2IconRight2 a img{
+	width: 0.16rem;
+	display: inline-block;
+}
+.bodyMain1Right{
+	width: calc(100% - 4.6rem);
+	text-align: center;
+	float: right;
+}
+.bodyMain1Right2{
+	font-size: 0.18rem;
+	font-weight: 400;
+	color: #505587;
+	line-height: 0.25rem;
+	margin-top: 0.2rem;
+}
+.bodyMain1Right3{
+	font-size: 0.22rem;
+	font-weight: 500;
+	margin-top: 0.05rem;
+	color: #FFA200;
+	line-height: 0.3rem;
+}
+.bodyMain1Right4{
+	margin-top: 0.05rem;
+	font-size: 0.18rem;
+	font-weight: 400;
+	color: #505587;
+	line-height: 0.25rem;
+}
+.bodyMain1Right4 span{
+	color: #FD4163;
+}
+.bodyMain2{
+	width: 7.33rem;
+	min-height: 3.25rem;
+	background: #FFFFFF;
+	box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgba(228, 228, 228, 0.2);
+	border-radius: 0.09rem;
+	opacity: 1;
+	border: 0.01rem solid #F2F3F5;
+	float: right;
+}
+.shuomingDiv{
+	padding: 0.35rem 0.42rem;
+	font-size: 0.18rem;
+	font-weight: 400;
+	color: #505587;
+	line-height: 0.36rem;
+}
+
+
+
+
+
+
+
+.bodyMain3{
+	float: left;
+	width: 100%;
+	margin-top: 0.5rem;
+	min-height: 7.05rem;
+	background: #FFFFFF;
+	box-shadow: 0.03rem 0.03rem 0.12rem 0.01rem rgba(228, 228, 228, 0.2);
+	border-radius: 0.09rem;
+	border: 0.01rem solid #F2F3F5;
+}
+.tfBtn{
+	display: inline-block;
+	width: 0.9rem;
+	text-align: center;
+	height: 0.41rem;
+	line-height: 0.41rem;
+	background: #744DFE;
+	box-shadow: 0rem 0.04rem 0.09rem 0.01rem rgba(116, 77, 254, 0.5019607843137255);
+	border-radius: 0.06rem;
+	font-size: 0.16rem;
+	font-weight: 400;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+}
+.tfBtn:hover{
+	background-color: #8866ff;
+}
+.tfBtn:hover,.tfBtn:active{
+	color: #FFFFFF;
+}
+.bodyMain3TableBox{
+	width: 100%;
+	overflow-x: auto;
+}
+@media screen and (max-width: 700px) {
+	.bodyMain1Left2{
+		padding-top: 0.4rem;
+	}
+	.bodyMain1{
+		width: 100%;
+	}
+	.bodyMain2{
+		width: 100%;
+		margin-top: 0.3rem;
+	}
+	.bodyMain3{
+		width: 100%;
+		margin-top: 0.3rem;
+	}
+	.tfBtn{
+		width: 3.3rem;
+		height: 0.76rem;
+		line-height: 0.76rem;
+		box-shadow: 0rem 0.06rem 0.12rem 0.02rem rgba(116, 77, 254, 0.4980392156862745);
+		border-radius: 0.12rem;
+		font-size: 0.32rem;
+	}
+	.bodyMain1Left1 .nichengBoxTitle2{
+		line-height: 0.34rem;
+	}
+	.bodyMain1Left1 .nichengBoxTitle2 span{
+		display: inline-block;
+		font-size: inherit;
+	}
+	.bodyMain1Left2IconRight2 a img{
+		height: 0.24rem;
+		width: 0.24rem;
+	}
+	.bodyMain1Left{
+		width: 100%;
+	}
+	.bodyMain1Right{
+		width: 100%;
+		padding-top: 0.7rem;
+	}
+	.bodyMain1Right2{
+		font-size: 0.28rem;
+		line-height: 0.5rem;
+		margin-top: 0.5rem;
+	}
+	.bodyMain1Right3{
+		font-size: 0.36rem;
+		margin-top: 0.2rem;
+		color: #FFA200;
+		line-height: 0.5rem;
+	}
+	.bodyMain1Right4{
+		margin-top: 0.2rem;
+		font-size: 0.28rem;
+		color: #505587;
+		line-height: 0.4rem;
+	}
+	.layui-table td, .layui-table th {
+	    position: relative;
+	    padding: 0.09rem 0.15rem;
+	    min-height: 0.20rem;
+	    line-height: 0.34rem;
+	    font-size: 0.24rem;
+	}
+	.bodyMain1Left2IconRight1{
+		font-size: 0.26rem;
+	}
+	.bodyMain1Left2IconRight2{
+		font-size: 0.26rem;
+	}
+	.shuomingDiv{
+		font-size: 0.26rem;
+	}
+}

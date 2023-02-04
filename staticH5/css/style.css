@@ -1,0 +1,591 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+*{
+	word-wrap:break-word
+}
+html{
+	max-width: 1920px;
+	margin: 0 auto;
+}
+body{
+	padding-left: 2.7rem;
+	padding-top: 1.41rem;
+}
+.headerBox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-left: 3.44rem;
+	height: 1.41rem;
+	width: 100%;
+	z-index: 998;
+	background: #FFFFFF;
+	border-bottom: 1px solid #ECF0F1;
+}
+.headerBoxTitle{
+	font-size: 0.3rem;
+	font-weight: 400;
+	color: #364064;
+	line-height: 0.42rem;
+	padding-top: 0.64rem;
+	float: left;
+}
+.headerBoxRightBox{
+	padding-top: 0.49rem;
+	float: right;
+}
+.headerBoxRightBoxTouXiang{
+	width: 0.6rem;
+	height: 0.6rem;
+	display: block;
+	float: left;
+}
+.headerBoxRightBoxName{
+	font-size: 0.3rem;
+	font-weight: 400;
+	color: #364064;
+	line-height: 0.6rem;
+	margin-left: 0.12rem;
+	float: left;
+}
+.headerBoxRightBoxhydj{
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #8593C2;
+	line-height: 0.6rem;
+	margin-left: 0.24rem;
+	float: left;
+}
+.vipIcon{
+	width: 0.25rem;
+	height: 0.25rem;
+	display: inline;
+}
+.huishu{
+	width: 0.03rem;
+	height: 0.33rem;
+	background-color: #8593C2;
+	float: left;
+	margin-top: 0.13rem;
+	margin-left: 0.35rem;
+}
+.tuichuBox{
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #364064;
+	margin-left: 0.35rem;
+	line-height: 0.6rem;
+	float: left;
+	margin-right: 0.72rem;
+}
+.tuichuBox img{
+	width: 0.25rem;
+	height: 0.25rem;
+	display: inline;
+	margin-right: 0.15rem;
+	float: left;
+    margin-top: 0.18rem;
+}
+.LeftMenuBox{
+	width: 2.70rem;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: #F6F8FC;
+}
+.LeftMenuBox .logoBox{
+	height: 1.41rem;
+	width: 100%;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 1.45rem;
+}
+.LeftMenuBox-Main{
+	height: calc(100vh - 1.41rem);
+	width: 100%;
+	overflow-y: auto;
+}
+.LeftMenuBox-Main-Li{
+	overflow: hidden;
+	padding: 0.2rem 0.39rem 0.2rem 0.55rem;
+	cursor: pointer;
+	border-radius: 0 0.11rem 0.11rem 0;
+	position: relative;
+	margin: 0.07rem 0 0;
+	display: block;
+}
+.LeftMenuBox-Main-Li-icon{
+	width: 0.17rem;
+	height: 0.25rem; 
+	padding: 0.04rem 0;
+	object-fit: contain;
+	display: block;
+	float: left;
+}
+.LeftMenuBox-Main-Li-icon:nth-child(2){
+	display: none;
+}
+.LeftMenuBox-Main-Li-label{
+	height: 0.25rem;
+	line-height: 0.25rem;
+	font-size: 0.18rem;
+	float: left;
+	width: 0.8rem;
+	text-align: center;
+	font-weight: 400;
+	margin-left: 0.1rem;
+	color: #505587;
+}
+.LeftMenuBox-Main-Li:hover,.LeftMenuBox-Main-Li.active{
+	background-color: #744DFE;
+}
+.LeftMenuBox-Main-Li:hover::after,.LeftMenuBox-Main-Li.active::after{
+	position: absolute;
+	content: "";
+	top: 50%;
+	right: 0.39rem;
+	transform: translateY(-50%);
+	width: 0.12rem;
+	height: 0.12rem;
+	background: #B8A4FE;
+	border-radius: 50%;
+}
+.LeftMenuBox-Main-Li:hover .LeftMenuBox-Main-Li-icon:nth-child(1),.LeftMenuBox-Main-Li.active .LeftMenuBox-Main-Li-icon:nth-child(1){
+	display: none;
+}
+.LeftMenuBox-Main-Li:hover .LeftMenuBox-Main-Li-icon:nth-child(2),.LeftMenuBox-Main-Li.active .LeftMenuBox-Main-Li-icon:nth-child(2){
+	display: block;
+}
+.LeftMenuBox-Main-Li:hover .LeftMenuBox-Main-Li-label,.LeftMenuBox-Main-Li.active .LeftMenuBox-Main-Li-label{
+	color: #fff;
+}
+.bodyMain{
+	padding: 0.52rem 0.74rem;
+	overflow: hidden;
+}
+.tfTitle{
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #364064;
+	line-height: 0.33rem;
+	padding-left: 0.24rem;
+	margin-top: 0.32rem;
+	position: relative;
+}
+.tfTitle::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 0.06rem;
+	height: 0.22rem;
+	transform: translateY(-50%);
+	background-color: #744DFE;
+}
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table-total, .layui-table-total tr, .layui-table[lay-even] tr:nth-child(even){
+	background-color: transparent;
+}
+.layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row]{
+	border-color: transparent;
+}
+.layui-table td, .layui-table th{
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+.layui-table th{
+	font-size: 0.22rem;
+	color: #364064;
+	font-weight: 600;
+	line-height: 0.78rem;
+}
+thead th{
+	border-bottom: 1px solid #ECF0F1 !important;
+}
+tbody td{
+	padding-top: 0.2rem;
+	height: 0.55rem;
+}
+.menuBtnBox{
+	display: none;
+}
+.layui-form-label{
+	width: 1.5rem;
+	padding: 0.09rem 0.15rem;
+	min-width: max-content;
+}
+.layui-input-block{
+	width: 5.51rem;
+	margin-left: 1.5rem;
+	min-height:0.36rem
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+
+input[type="number"] {
+-moz-appearance: textfield;
+}
+.layui-input, .layui-textarea{
+	width: 100%;
+	height: 0.44rem;
+	background: #FFFFFF;
+	border-radius: 0.04rem 0.04rem 0.04rem 0.04rem;
+	opacity: 1;
+	border: 0.01rem solid #ECF0F1;
+	outline-style: none;
+	font-size: 0.18rem;
+	font-weight: 400;
+	padding-left: 0.15rem;
+}
+.layui-input::-webkit-input-placeholder,.layui-textarea::-webkit-input-placeholder{ /* WebKit browsers */
+  color: #C8CFE5;
+}
+
+.layui-input::-moz-placeholder,.layui-textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #C8CFE5;
+}
+
+.layui-input:-ms-input-placeholder,.layui-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #C8CFE5;
+}
+.layui-form-item{
+	margin-top: 0.27rem;
+}
+.yulantuBox{
+	cursor: pointer;
+	height: 1rem;
+	position: relative;
+	width: 1rem;
+}
+.yulantuBox input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-color: #fff;
+	opacity: 0;
+}
+.yulantu{
+	cursor: pointer;
+	height: 1rem;
+	width: 1rem;
+	position: absolute;
+	top: 1%;
+	left: 25%;
+	border-radius: 0.05rem;
+	width: 98%;
+	height: 98%;
+	z-index: 5;
+}
+.layui-btn{
+	width: 3.04rem;
+	height: 0.65rem;
+	text-align: center;
+	line-height: 0.65rem;
+	background: #744DFE;
+	box-shadow: 0rem 0.04rem 0.09rem 0.01rem rgba(116, 77, 254, 0.4980392156862745);
+	border-radius: 0.11rem;
+	display: block;
+	margin: 0 auto;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+.shuomingBox{
+	display: flex;
+	align-items: flex-start;
+	font-size: 0.14rem;
+	font-weight: 400;
+	color: #8593C2;
+	line-height: 0.25rem;
+	width: 4.46rem;
+}
+.shuomingBox>div:nth-child(1){
+	flex-shrink: 0;
+}
+.shuomingBox>div:nth-child(2){
+	flex: 1;
+	width: 100%;
+}
+.tfZheZhao{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.35);
+	z-index: 9999;
+}
+.tfAlertBox{
+	width: 5.2rem;
+	background: #FFFFFF;
+	border-radius: 0.22rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding-top: 0.72rem;
+	padding-bottom: 0.72rem;
+}
+.tfZheZhao .closeImg{
+	position: absolute;
+	top: -0.3rem;
+	right: -0.7rem;
+	width: 0.6rem;
+	height: 0.6rem;
+	background-image: url(../img/closeImg.png);
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.typeStatus{
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0 auto;
+	background-size: 100% 100%;
+}
+.typeStatus.type1{
+	background-image: url(../img/succeed.png);
+}
+.typeStatus.type2{
+	background-image: url(../img/error.png);
+}
+.tfAlertBoxTitle{
+	margin: 0.28rem auto 0;
+	width: 4rem;
+	line-height: 0.5rem;
+	height: 0.5rem;
+	text-align: center;
+	font-size: 0.36rem;
+	font-weight: 600;
+	color: #505587;
+}
+.tfAlertBoxContent{
+	margin: 0.2rem auto 0;
+	width: 4rem;
+	text-align: center;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #505587;
+	line-height: 0.34rem;
+}
+.tfAlertBoxQueDing{
+	width: 2.5rem;
+	text-align: center;
+	height: 0.76rem;
+	line-height: 0.76rem;
+	background: #744DFE;
+	box-shadow: 0rem 0.06rem 0.12rem 0.02rem rgba(116, 77, 254, 0.4980392156862745);
+	border-radius: 0.12rem;
+	margin: 0.4rem auto 0;
+	font-size: 0.32rem;
+	font-weight: 400;
+	color: #FFFFFF;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.tfAlertBoxQueDing:hover{
+	background-color: #7961fe;
+}
+.tfAlertBoxQueDingBox{
+	overflow: hidden;
+	width: 5rem;
+	margin: 0 auto 0;
+	padding: 0.4rem;
+	margin-bottom: -0.4rem;
+}
+.tfAlertBoxQueDing0{
+	width: 1.7rem;
+	text-align: center;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	background: rgba(116,77,254,.66);
+	box-shadow: 0rem 0.06rem 0.12rem 0.02rem rgba(116, 77, 254, 0.4980392156862745);
+	border-radius: 0.12rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	color: #FFFFFF;
+	cursor: pointer;
+	transition: all 0.3s;
+	float: left;
+}
+.tfAlertBoxQueDing1{
+	float: right;
+	width: 1.7rem;
+	text-align: center;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	background: #744DFE;
+	box-shadow: 0rem 0.06rem 0.12rem 0.02rem rgba(116, 77, 254, 0.4980392156862745);
+	border-radius: 0.12rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	color: #FFFFFF;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+div.layui-input{
+	line-height: 0.54rem;
+	display: inline-block;
+	border: none;
+}
+.messageBox{
+	line-height: 0.6rem;
+	margin-left: 0.34rem;
+	float: left;
+	position: relative;
+}
+.messageBoxImg{
+	height: 0.3rem;
+}
+.hongquan{
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateX(50%);
+	font-size: 0.2rem;
+	padding: 0 0.07rem;
+	line-height: 0.26rem;
+	background-color: red;
+	border-radius: 500px;
+	color: #fff;
+}
+@media screen and (max-width: 700px) {
+    .newtop{ display:none;}
+	body{
+		padding: 0;
+	}
+	.tfTitle{
+		font-size: 0.32rem;
+		line-height: 0.4rem;
+	}
+	.tfTitle::before{
+		width: 0.08rem;
+		height: 0.4rem;
+	}
+	.LeftMenuBox{
+		top: 1rem;
+		width: 100%;
+		background-color: transparent;
+		transform: translateY(-100%);
+		transition: all 0.3s;
+	}
+	.headerBox{
+		z-index: 1000;
+		padding-left: 0;
+		height: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.headerBoxTitle{
+		display: none;
+	}
+	.headerBoxRightBox{
+		width: 100%;
+		padding-top: 0;
+		padding-left: 0.5rem;
+	}
+	.LeftMenuBox .logoBox{
+		display: none;
+	}
+	.LeftMenuBox-Main{
+		height: calc(100vh - 1rem);
+		background-color: #F6F8FC;
+	}
+	.LeftMenuBox-Main-Li-label{
+		width: auto;
+	}
+	.LeftMenuBox.active{
+		transform: translateY(0);
+	}
+	.huishu{
+		display: none;
+	}
+	.tuichuBox{
+		float: right;
+		margin-right: 0.2rem;
+	}
+	.tuichuBox img{
+		width: 0.35rem;
+		height: 0.35rem;
+		float: left;
+		margin-top: 0.14rem;
+	}
+	.menuBtnBox{
+	    text-align: center;
+	    color: red;
+	    line-height: 1.5rem;
+		width: 3rem;
+		height: 1rem;
+		display: block;
+		background-image: url(../img/menuIcon.png);
+		background-size: 0.5rem 0.5rem;
+		background-position: center 0.1rem;
+		background-repeat: no-repeat;
+	}
+	.bodyMain{
+		padding: 1.32rem 0.24rem;
+	}
+	.LeftMenuBox-Main-Li-label{
+		font-size: 0.32rem;
+		line-height: 1;
+	}
+	.LeftMenuBox-Main-Li{
+		padding: 0.3rem 0.39rem 0.3rem 0.55rem;
+		display: flex;
+		align-items: center;
+	}
+	.LeftMenuBox-Main-Li-icon{
+		width: 0.4rem;
+		height: 0.4rem;
+	}
+	.layui-form-label{
+		width: 1.9rem;
+	}
+	.layui-input-block{
+		width: 4.51rem;
+		margin-left: 2.0rem;
+	}
+	.layui-input, .layui-textarea{
+		width: 100%;
+		height: 0.6rem;
+		font-size: 0.26rem;
+		line-height: 0.6rem;
+	}
+	.shuomingBox{
+		display: block;
+		font-size: 0.26rem;
+		line-height: 0.4rem;
+	}
+	div.layui-input{
+		line-height: 0.6rem;
+		display: inline-block;
+		border: none;
+	}
+	.yulantuBox{
+		width: 2rem;
+		height: 2rem;
+	}
+	.headerBoxRightBoxhydj{
+		font-size: 0.3rem;
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+	.headerBoxRightBoxhydj span{
+		
+	}
+	.vipIcon{
+		width: 0.3rem;
+		height: 0.3rem;
+	}
+	.tfAlertBox{
+		transform: translate(-50%,calc(-50% - 0.5rem));
+	}
+}
