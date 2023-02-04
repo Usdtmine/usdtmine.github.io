@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html><html><head><script type="text/javascript">
+	function initFontSize(){
+		var WIDTH_ = document.getElementsByTagName('html')[0].clientWidth;
+		WIDTH_ = WIDTH_>1920?1920:WIDTH_;
+		if(WIDTH_<700){
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 750 * 100)+'px';
+		}else{
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 1920 * 100)+'px';
+		}
+	}
+	window.onresize = function(){
+		initFontSize()
+	}
+	initFontSize()
+	/*
+	setInterval(function(){
+		initFontSize()
+	},50)
+	*/
+</script><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><title>Usdt market</title><link rel="stylesheet" type="text/css" href="../../static/js/layui/css/layui.css"/><link rel="stylesheet" type="text/css" href="../../staticH5/css/style.css?v=123"/><script src="../../static/js/layui/layui.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
+	var $ = layui.$;
+</script><script>function tfalert(content,title,confirm,type,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	type = type||1;
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg"></div>\
+						<div class="typeStatus type'+type+'"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDing">'+confirm+'</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+function tfConfirm(content,title,confirm,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg" style="display:none;"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDingBox">\
+							<div class="tfAlertBoxQueDing0">Cancel</div>\
+							<div class="tfAlertBoxQueDing1">'+confirm+'</div>\
+						</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing0',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing1',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+</script><script type="text/javascript">
+	layer.msg = function(content){
+		tfalert(content,"Hint","Confirm","2",function(){
+			
+		});
+	}
+	//发送邮箱
+	function sendArray(data,callfunc){
+		layer_load = layer.load();
+		$.ajax({
+			url:'/index/index/mail.html',
+			type:'post',
+			data:data,
+			success : function(result) {
+				layer.close(layer_load);
+				if(callfunc){
+					callfunc();
+				}
+				// location.reload()
+			},
+			//请求失败，包含具体的错误信息
+			error : function(e){
+				layer.close(layer_load);
+				layer.msg('网络连接超时');
+			}
+		})
+	}
+</script><link rel="stylesheet" type="text/css" href="../../staticH5/css/explain.css" /></head><body><div class="headerBox"><div class="headerBoxTitle">Usdt market</div><div class="headerBoxRightBox"><img src="../../staticH5/img/touxiang.png" class="headerBoxRightBoxTouXiang"><div class="headerBoxRightBoxName">AUFD36</div><div class="headerBoxRightBoxhydj"><span></span>vip2<img src="../../staticH5/img/vipIcon.png" class="vipIcon"></div><div class="huishu"></div><a class="headerBoxRightBoxhydj messageBox" href="/index/index/send.html"><!-- <img src="../../staticH5/img/znx.png" class="messageBoxImg"> -->Notice</a><div class="huishu"></div><!--<a class="tuichuBox" href="/index/index/logout.html"><img src="../../staticH5/img/loginOut.png" >Quit</a>--><style>
+                    .language{ position: absolute; left: 0;z-index: 999;background: #fff;padding: 5px 0 0 5px;}
+                    .language li img{ float:left;}
+                    .language li a{ color:#333;}
+                    .language li.active a{ color:#7670d9;}
+                </style><div class="tuichuBox" style="position:relative;width: 1.6rem;"><img src="../../static/picture/en-us.jpg"/><div class="lang_btn">English</div><ul class="language" style="display:none"><li class="active"><img src="../../static/picture/en-us.jpg"/><a href="/index/index/index.html?lang=en-us">English</a></li><li ><img src="../../static/picture/pt-pt.jpg"/><a href="/index/index/index.html?lang=pt-pt">portugu&ecirc;s</a></li><li ><img src="../../static/picture/es-es.jpg"/><a href="/index/index/index.html?lang=es-es">espa&ntilde;ol</a></li><li ><img src="../../static/picture/tr-tr.jpg"/><a href="/index/index/index.html?lang=tr-tr">T&uuml;rkiye</a></li><li ><img src="../../static/picture/yn-yn.jpg"/><a href="/index/index/index.html?lang=yn-yn">Tiếng Việt</a></li><li ><img src="../../static/picture/zh-tw.jpg"/><a href="/index/index/index.html?lang=zh-tw">中文繁體</a></li><li ><img src="../../static/picture/hg-hg.jpg"/><a href="/index/index/index.html?lang=hg-hg">한국</a></li></ul></div></div><div class="menuBtnBox">
+			    More Features
+			</div></div><div class="LeftMenuBox"><div class="logoBox" style="background-image: url(/upload/20220325173904.logo.png);"></div><div class="LeftMenuBox-Main"><a class="LeftMenuBox-Main-Li" href="/index/index/index.html"><img src="../../staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Home</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/chongzhi.html"><img src="../../staticH5/img/icon/leftIcon2.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon2-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Recharge</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/tixian.html"><img src="../../staticH5/img/icon/leftIcon3.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon3-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Withdraw</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanzhang.html"><img src="../../staticH5/img/icon/leftIcon4.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon4-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Member Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shengji.html"><img src="../../staticH5/img/icon/leftIcon5.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon5-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Membership Upgrade</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanyi.html"><img src="../../staticH5/img/icon/leftIcon6.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon6-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Asset Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/send.html"><img src="../../staticH5/img/icon/leftIcon8.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon8-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Customer Service</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shuoming.html"><img src="../../staticH5/img/icon/leftIcon9.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Common Problem</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/wailian.html"><img src="../../staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Friendship Link</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/logout.html"><img src="../../staticH5/img/loginOut.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Quit</div></a></div></div><script type="text/javascript">
+			$('.menuBtnBox').on('click',function(){
+				if($('.LeftMenuBox').hasClass('active')){
+					$('.LeftMenuBox').removeClass('active');
+				}else{
+					$('.LeftMenuBox').addClass('active');
+				}
+			})
+			$('.LeftMenuBox-Main-Li').on('click',function(){
+				$('.LeftMenuBox').removeClass('active');
+			})
+		</script><script type="text/javascript">
+			$('.LeftMenuBox-Main-Li[href="/index/index/shuoming.html"]').addClass("active");
+			$('.lang_btn').click(function(){
+                 $('.language').toggle();
+             })
+		</script><div class="bodyMain"><!--
+			<div class="bodyMain1"><div class="tfTitle">网站简介 Website introduction</div><div class="shuomingDiv"><p><span>本平台是第三方交易平台，致力于提供“简单、安全、快速”的隐性转账解决方案；从2014年建立开始，始终以“信任”作为产品和服务的核心。平台使用泰达币(USDT)作为流通货币；平台不产生产品，也不干涉会员任何交易，除了等级额度不同。会员间享有权益都是相同的，用户间互相转账，是不可逆行为，也是匿名的，双方之间仅使用一个转账即可进行交易。。平台注重用户隐私，可放心使用！</span></p><p><span><br></span></p><p>泰达币(USDT)是全球最热门的稳定币，很多国家都有使用usdt进行交易购买物品的习惯，甚至可以使用usdt结算工资，但是usdt并不是一个匿名的币种，任何人都可以通过公开的浏览器知道你的钱包有多少余额和资产去向。对于重视隐私的用户这是一个无法解决的问题。</p><p>当你想使用usdt和其他人交易的时候，你想更好的达到匿名和安全性，就可以使用本网站进行转账，而你不会暴露付款人的任何信息包括钱包地址，而你存在平台的余额将按照年化率4.5%给你结算利息</p></div></div>
+			--><div class="bodyMain1"><div class="tfTitle">Platform FAQ</div><div class="shuomingDiv"><div class="shuomingDivLi"><div class="shuomingDivLiTitle">How often is each account used? How long does it take to upgrade the account limit authorization?</div><div class="shuomingDivLiContent">A: Except for vip1, which lasts for 1 month, the usage time of other accounts is permanent, and the quota permission is also permanently enjoyed.</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">What information can be modified?</div><div class="shuomingDivLiContent">A: (login password) and (withdrawal address) can be modified by the key；<br>(Key) and (Secret email address) cannot be modified and are the final ownership certificate of your account</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">The newly registered account level is 0, what permissions do I have?</div><div class="shuomingDivLiContent">A: The platform is open for tourist registration. Anyone can register their own account. The level of the newly registered account is 0 (you can recharge, transfer money to others, withdraw cash, and generate checks). These are free, and you can operate without upgrading your account.</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">What does the account upgrade level do and what are the benefits?？</div><div class="shuomingDivLiContent">A: If your account needs to receive transfers from others and exchange electronic checks from others, you need to use the payment limit（At this time, accounts with level 0 will not be able to receive money.）You need to upgrade your account with level 0 to at least one-star membership in order to use the payment function; the higher the level, the different daily and monthly allowances, please upgrade as needed.</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">I want to upgrade my account Is the money I recharged still in the balance, can I withdraw it?</div><div class="shuomingDivLiContent">A：Upgrade to VIP level. The corresponding balance needs to be deducted to pay the deposit, and the account has been upgraded for 60 days. If you do not want to continue to use it, you can apply for cancellation, 70% of the registered capital will be refunded, and the account will return to level zero.</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">Can assets be transferred?</div><div class="shuomingDivLiContent">Answer: Yes, if you are the owner of two accounts and have a large amount of funds, you can apply for account asset transfer, so that you are not limited by the quota; only for accounts above vip3</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">Is there a limit for withdrawing coins, can I use the payment limit, and can I mention other wallet addresses?</div><div class="shuomingDivLiContent">A: Withdrawal requires VIP1 level or above. Except for VIP1, other levels have no upper limit. You can refer to your withdrawal address when you reach 10 Tether; the level limit will not be used; withdrawals can only be withdrawn to the time of registration. Withdrawal address.</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">Why hasn't the withdrawal arrived yet?</div><div class="shuomingDivLiContent">A: Due to the large number of withdrawals made by members every day, the system will take time to settle. Adhering to the queuing mode, payment is made according to the time. Therefore, during the peak period, when the number of users is large, it will naturally feel slower than usual, usually 24 hours. The process is completed within the time limit; another reason is that the withdrawal address you filled in is incorrect, which will cause the withdrawal to fail.</div></div><div class="shuomingDivLi"><div class="shuomingDivLiTitle">The transfer is wrong, can I get it back?</div><div class="shuomingDivLiContent">A: This is the same reason that your bank card transfers money wrongly, and it is an irreversible operation; if you make a wrong transfer, you can contact customer service, and customer service will send an email to the other party. If the other party agrees, you can get it back. If the other party does not reply, we have no right to interfere; including the loss of funds due to the leakage of your own account password. Please keep your private information safe!</div></div></div></div></div><div style="display:none"><!-- Global site tag (gtag.js) - Google Analytics --><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-TGDP23DWDF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TGDP23DWDF');
+</script></div></body></html>

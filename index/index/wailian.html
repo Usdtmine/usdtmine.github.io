@@ -1,0 +1,208 @@
+
+<!DOCTYPE html><html><head><script type="text/javascript">
+	function initFontSize(){
+		var WIDTH_ = document.getElementsByTagName('html')[0].clientWidth;
+		WIDTH_ = WIDTH_>1920?1920:WIDTH_;
+		if(WIDTH_<700){
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 750 * 100)+'px';
+		}else{
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 1920 * 100)+'px';
+		}
+	}
+	window.onresize = function(){
+		initFontSize()
+	}
+	initFontSize()
+	/*
+	setInterval(function(){
+		initFontSize()
+	},50)
+	*/
+</script><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><title>FAXFUL丨USDT ticaret platformu</title><link rel="stylesheet" type="text/css" href="../../static/js/layui/css/layui.css"/><link rel="stylesheet" type="text/css" href="../../staticH5/css/style.css?v=123"/><script src="../../static/js/layui/layui.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
+	var $ = layui.$;
+</script><script>function tfalert(content,title,confirm,type,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	type = type||1;
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg"></div>\
+						<div class="typeStatus type'+type+'"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDing">'+confirm+'</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+function tfConfirm(content,title,confirm,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg" style="display:none;"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDingBox">\
+							<div class="tfAlertBoxQueDing0">İptal</div>\
+							<div class="tfAlertBoxQueDing1">'+confirm+'</div>\
+						</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing0',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing1',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+</script><script type="text/javascript">
+	layer.msg = function(content){
+		tfalert(content,"Hint","Confirm","2",function(){
+			
+		});
+	}
+	//发送邮箱
+	function sendArray(data,callfunc){
+		layer_load = layer.load();
+		$.ajax({
+			url:'/index/index/mail.html',
+			type:'post',
+			data:data,
+			success : function(result) {
+				layer.close(layer_load);
+				if(callfunc){
+					callfunc();
+				}
+				// location.reload()
+			},
+			//请求失败，包含具体的错误信息
+			error : function(e){
+				layer.close(layer_load);
+				layer.msg('网络连接超时');
+			}
+		})
+	}
+</script><link rel="stylesheet" type="text/css" href="../../staticH5/css/metastasis.css" /></head><body><div class="headerBox"><div class="headerBoxTitle">PAXFUL丨USDT ticaret platformu</div><div class="headerBoxRightBox"><img src="../../staticH5/img/touxiang.png" class="headerBoxRightBoxTouXiang"><div class="headerBoxRightBoxName">AUFD36</div><div class="headerBoxRightBoxhydj"><span></span>vip2<img src="../../staticH5/img/vipIcon.png" class="vipIcon"></div><div class="huishu"></div><a class="headerBoxRightBoxhydj messageBox" href="/index/index/send.html"><!-- <img src="../../staticH5/img/znx.png" class="messageBoxImg"> -->Notice</a><div class="huishu"></div><!--<a class="tuichuBox" href="/index/index/logout.html"><img src="../../staticH5/img/loginOut.png" >Çıkış yapmak</a>--><style>
+                    .language{ position: absolute; left: 0;z-index: 999;background: #fff;padding: 5px 0 0 5px;}
+                    .language li img{ float:left;}
+                    .language li a{ color:#333;}
+                    .language li.active a{ color:#7670d9;}
+                </style><div class="tuichuBox" style="position:relative;width: 1.6rem;"><img src="../../static/picture/en-us.jpg"/><div class="lang_btn">English</div><ul class="language" style="display:none"><li class="active"><img src="../../static/picture/en-us.jpg"/><a href="/index/index/index.html?lang=en-us">English</a></li><li ><img src="../../static/picture/pt-pt.jpg"/><a href="/index/index/index.html?lang=pt-pt">portugu&ecirc;s</a></li><li ><img src="../../static/picture/es-es.jpg"/><a href="/index/index/index.html?lang=es-es">espa&ntilde;ol</a></li><li ><img src="../../static/picture/tr-tr.jpg"/><a href="/index/index/index.html?lang=tr-tr">T&uuml;rkiye</a></li><li ><img src="../../static/picture/yn-yn.jpg"/><a href="/index/index/index.html?lang=yn-yn">Tiếng Việt</a></li><li ><img src="../../static/picture/zh-tw.jpg"/><a href="/index/index/index.html?lang=zh-tw">中文繁體</a></li><li ><img src="../../static/picture/hg-hg.jpg"/><a href="/index/index/index.html?lang=hg-hg">한국</a></li></ul></div></div><div class="menuBtnBox">
+			    More Features
+			</div></div><div class="LeftMenuBox"><div class="logoBox" style="background-image: url(/upload/20220325173904.logo.png);"></div><div class="LeftMenuBox-Main"><a class="LeftMenuBox-Main-Li" href="/index/index/index.html"><img src="../../staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Ev</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/chongzhi.html"><img src="../../staticH5/img/icon/leftIcon2.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon2-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">şarj etmek</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/tixian.html"><img src="../../staticH5/img/icon/leftIcon3.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon3-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Geri çekilmek</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanzhang.html"><img src="../../staticH5/img/icon/leftIcon4.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon4-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Üye Transferi</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shengji.html"><img src="../../staticH5/img/icon/leftIcon5.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon5-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Üyelik Yükseltme</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanyi.html"><img src="../../staticH5/img/icon/leftIcon6.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon6-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Asset Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/send.html"><img src="../../staticH5/img/icon/leftIcon8.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon8-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Müşteri servisi</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shuoming.html"><img src="../../staticH5/img/icon/leftIcon9.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Ortak Sorun</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/wailian.html"><img src="../../staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Arkadaşlık Bağlantısı</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/logout.html"><img src="../../staticH5/img/loginOut.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Çıkış yapmak</div></a></div></div><script type="text/javascript">
+			$('.menuBtnBox').on('click',function(){
+				if($('.LeftMenuBox').hasClass('active')){
+					$('.LeftMenuBox').removeClass('active');
+				}else{
+					$('.LeftMenuBox').addClass('active');
+				}
+			})
+			$('.LeftMenuBox-Main-Li').on('click',function(){
+				$('.LeftMenuBox').removeClass('active');
+			})
+		</script><script type="text/javascript">
+			$('.LeftMenuBox-Main-Li[href="/index/index/wailian.html"]').addClass("active");
+			$('.lang_btn').click(function(){
+                 $('.language').toggle();
+             })
+		</script><div class="bodyMain" style="display: block;"><div class="bodyMainLeft"><div class="bodyMain2" style="height:auto; padding:10px;"><span style="font-size:24px;"><a href="https://www.ouyi.cc/" target="_blank">OKEx</a>&nbsp; &nbsp;&nbsp;<a href="https://www.blockchain.com" target="_blank">blockchain</a>&nbsp; &nbsp;&nbsp;<a href="https://www.paxful.com" target="_blank">paxful</a>&nbsp; &nbsp;&nbsp;<a href="https://www.uduncloud.com/" target="_blank">Youdun Wallet</a>&nbsp; &nbsp;&nbsp;<a href="https://www.ucloud.cn/" target="_blank">UCloud</a>&nbsp; &nbsp;&nbsp;<a href="https://www.huobiwallet.com/" target="_blank">Huobi</a>&nbsp; &nbsp; <a href="https://zephyrnet.com/" target="_blank">zephyrnet</a>&nbsp; &nbsp;&nbsp;<a href="https://www.528btc.com/" target="_blank">Coinjie</a>&nbsp; &nbsp;&nbsp;<a href="https://trustwallet.com/zh_CN/" target="_blank">Trust Wallet</a>&nbsp; &nbsp;&nbsp;<a href="https://to-coin.com" target="_blank">To-Coin</a>&nbsp; &nbsp;&nbsp;<a href="https://www.binance.com/zh-CN/" target="_blank">Binance official website</a>&nbsp; &nbsp;&nbsp;<a href="https://usdt.tokenview.com/cn/" target="_blank">Tether browser</a>&nbsp; &nbsp;&nbsp;<a href="https://www.uduncloud.com" target="_blank">Udun Vallet</a>&nbsp; &nbsp;&nbsp;<a href="https://tecra.space/cn" target="_blank">Tecra Space</a></span></div></div></div><div class="bodyMain"><div class="bodyMainLeft"><div class="bodyMain2"><span style="font-size:24px;"><a href="https://www.ouyi.cc/" target="_blank">OKEx</a>&nbsp; &nbsp;&nbsp;<a href="https://www.blockchain.com" target="_blank">blockchain</a>&nbsp; &nbsp;&nbsp;<a href="https://www.paxful.com" target="_blank">paxful</a>&nbsp; &nbsp;&nbsp;<a href="https://www.uduncloud.com/" target="_blank">Youdun Wallet</a>&nbsp; &nbsp;&nbsp;<a href="https://www.ucloud.cn/" target="_blank">UCloud</a>&nbsp; &nbsp;&nbsp;<a href="https://www.huobiwallet.com/" target="_blank">Huobi</a>&nbsp; &nbsp; <a href="https://zephyrnet.com/" target="_blank">zephyrnet</a>&nbsp; &nbsp;&nbsp;<a href="https://www.528btc.com/" target="_blank">Coinjie</a>&nbsp; &nbsp;&nbsp;<a href="https://trustwallet.com/zh_CN/" target="_blank">Trust Wallet</a>&nbsp; &nbsp;&nbsp;<a href="https://to-coin.com" target="_blank">To-Coin</a>&nbsp; &nbsp;&nbsp;<a href="https://www.binance.com/zh-CN/" target="_blank">Binance official website</a>&nbsp; &nbsp;&nbsp;<a href="https://usdt.tokenview.com/cn/" target="_blank">Tether browser</a>&nbsp; &nbsp;&nbsp;<a href="https://www.uduncloud.com" target="_blank">Udun Vallet</a>&nbsp; &nbsp;&nbsp;<a href="https://tecra.space/cn" target="_blank">Tecra Space</a></span></div></div></div><div class="bodyMain"><div class="bodyMainLeft"><div class="bodyMain2"><span style="font-size:24px;"><a href="https://www.ouyi.cc/" target="_blank">OKEx</a>&nbsp; &nbsp;&nbsp;<a href="https://www.blockchain.com" target="_blank">blockchain</a>&nbsp; &nbsp;&nbsp;<a href="https://www.paxful.com" target="_blank">paxful</a>&nbsp; &nbsp;&nbsp;<a href="https://www.uduncloud.com/" target="_blank">Youdun Wallet</a>&nbsp; &nbsp;&nbsp;<a href="https://www.ucloud.cn/" target="_blank">UCloud</a>&nbsp; &nbsp;&nbsp;<a href="https://www.huobiwallet.com/" target="_blank">Huobi</a>&nbsp; &nbsp; <a href="https://zephyrnet.com/" target="_blank">zephyrnet</a>&nbsp; &nbsp;&nbsp;<a href="https://www.528btc.com/" target="_blank">Coinjie</a>&nbsp; &nbsp;&nbsp;<a href="https://trustwallet.com/zh_CN/" target="_blank">Trust Wallet</a>&nbsp; &nbsp;&nbsp;<a href="https://to-coin.com" target="_blank">To-Coin</a>&nbsp; &nbsp;&nbsp;<a href="https://www.binance.com/zh-CN/" target="_blank">Binance official website</a>&nbsp; &nbsp;&nbsp;<a href="https://usdt.tokenview.com/cn/" target="_blank">Tether browser</a>&nbsp; &nbsp;&nbsp;<a href="https://www.uduncloud.com" target="_blank">Udun Vallet</a>&nbsp; &nbsp;&nbsp;<a href="https://tecra.space/cn" target="_blank">Tecra Space</a></span></div></div></div><script type="text/javascript">
+			layui.use(['form', 'upload'], function() {
+				var form = layui.form;
+				var layer_load = false;
+				//监听提交
+				form.on('submit(formDemo)', function(data) {
+					//验证账号是否有转移资格
+					if(data.field.type==1){
+						layer_load = layer.load();
+						$.ajax({
+							url:'',
+							type:'post',
+							data:data.field,//向后台传的值示例{"account":"test123","send_password":"123456","type":"1"}
+							success : function(result) {
+								layer.close(layer_load);
+								if(result.code==1){
+									tfalert("Transfer Succeeded","Hint","Elbette", "1", function () {
+								        location.reload()
+									});
+								}else{
+									layer.msg(result.info);
+								}
+							},
+							//请求失败，包含具体的错误信息
+							error : function(e){
+								layer.close(layer_load);
+								layer.msg('网络连接超时');
+							}
+						})
+						return false;
+					}
+					//申请转移资产
+					if(data.field.type==2){
+						layer_load = layer.load();
+						$.ajax({
+							url:'',
+							type:'post',
+							data:data.field,//向后台传的值示例{"account":"test123","send_password":"123456","type":"2"}
+							success : function(result) {
+								layer.close(layer_load);
+								if(result.code==1){
+									tfalert("Transfer Succeeded","Hint","Elbette", "1", function () {
+								        location.reload()
+									});
+								}else{
+									layer.msg(result.info);
+								}
+							},
+							//请求失败，包含具体的错误信息
+							error : function(e){
+								layer.close(layer_load);
+								layer.msg('网络连接超时');
+							}
+						})
+						return false;
+					}
+				});
+			});
+			function toPage1(){
+				$(".bodyMain").hide().eq(0).show()
+			}
+			function toPage2(){
+				$(".bodyMain").hide().eq(1).show()
+			}
+			function toPage3(){
+				$(".bodyMain").hide().eq(2).show()
+			}
+		</script><div style="display:none"><!-- Global site tag (gtag.js) - Google Analytics --><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-TGDP23DWDF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TGDP23DWDF');
+</script></div></body></html>

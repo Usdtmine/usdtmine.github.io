@@ -1,0 +1,123 @@
+
+<!DOCTYPE html><html lang="zh-CN" style="--status-bar-height:0px; --top-window-height:0px; --window-left:0px; --window-right:0px; --window-margin:0px; --window-top:calc(var(--top-window-height) + 0px); --window-bottom:0px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title></title><script>var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')</script><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"><link rel="stylesheet" href="/static/theme/index.css"><link rel="stylesheet" type="text/css" href="/static/js/layui/css/layui.css"/><link rel="stylesheet" type="text/css" href="/staticH5/css/style.css?v=123"/><script src="/static/js/layui/layui.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
+        	var $ = layui.$;
+        </script><script>            function tfalert(content,title,confirm,type,callBack){
+            	title = title||"Hint";
+            	confirm = confirm||"Confirm";
+            	type = type||1;
+            	var rdm = (Math.random()+'').replace(/0./g,'');
+            	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+            					<div class="tfAlertBox">\
+            						<div class="closeImg"></div>\
+            						<div class="typeStatus type'+type+'"></div>\
+            						<div class="tfAlertBoxTitle">'+title+'</div>\
+            						<div class="tfAlertBoxContent">'+content+'</div>\
+            						<div class="tfAlertBoxQueDing">'+confirm+'</div>\
+            					</div>\
+            				</div>';
+            	$('body').append(html_);
+            	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+            	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+            		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+            		setTimeout(function(){
+            			$('body').find('#tfZheZhao'+rdm).remove();
+            		},300)
+            	})
+            	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing',function(){
+            		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+            		if(callBack){
+            			callBack()
+            		}
+            	})
+            }
+            function tfConfirm(content,title,confirm,callBack){
+            	title = title||"Hint";
+            	confirm = confirm||"Confirm";
+            	var rdm = (Math.random()+'').replace(/0./g,'');
+            	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+            					<div class="tfAlertBox">\
+            						<div class="closeImg" style="display:none;"></div>\
+            						<div class="tfAlertBoxTitle">'+title+'</div>\
+            						<div class="tfAlertBoxContent">'+content+'</div>\
+            						<div class="tfAlertBoxQueDingBox">\
+            							<div class="tfAlertBoxQueDing0">Cancel</div>\
+            							<div class="tfAlertBoxQueDing1">'+confirm+'</div>\
+            						</div>\
+            					</div>\
+            				</div>';
+            	$('body').append(html_);
+            	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+            	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+            		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+            		setTimeout(function(){
+            			$('body').find('#tfZheZhao'+rdm).remove();
+            		},300)
+            	})
+            	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing0',function(){
+            		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+            	})
+            	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing1',function(){
+            		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+            		if(callBack){
+            			callBack()
+            		}
+            	})
+            }
+            </script><style>
+            .lang_btn{
+                color:#fff;
+                font-size: 16px;
+            }
+        </style></head><body class="uni-body pages-login-login"><noscript><strong>Please enable JavaScript to continue.</strong></noscript><uni-app class="uni-app--maxwidth"><uni-page data-page="pages/login/login"><!----><!----><uni-page-wrapper><uni-page-body><uni-view data-v-6327a35e="" class="login"><uni-view data-v-6327a35e="" class="header"><uni-view data-v-6327a35e="" class="lang" style="height:2rem"><div class="tuichuBox" style="position:relative;width: 4.6rem;"><!--<img src="/static/picture/en-us.jpg"/>--><div class="lang_btn" style="line-height:1.5rem">English</div><ul class="language" style="display:none;position: absolute;top:30px;left:0;z-index:999"><li class="active" style="line-height:1.5rem"><!--<img src="/static/picture/en-us.jpg"/>--><a href="/index/index/index.html?lang=en-us" style="color:#fa855a;font-size:16px">English</a></li><li  style="line-height:1.5rem"><!--<img src="/static/picture/pt-pt.jpg"/>--><a href="/index/index/index.html?lang=pt-pt" style="color:#fa855a;font-size:16px">portugu&ecirc;s</a></li><li  style="line-height:1.5rem"><!--<img src="/static/picture/es-es.jpg"/>--><a href="/index/index/index.html?lang=es-es" style="color:#fa855a;font-size:16px">espa&ntilde;ol</a></li><li  style="line-height:1.5rem"><!--<img src="/static/picture/tr-tr.jpg"/>--><a href="/index/index/index.html?lang=tr-tr" style="color:#fa855a;font-size:16px">T&uuml;rkiye</a></li><li  style="line-height:1.5rem"><!--<img src="/static/picture/yn-yn.jpg"/>--><a href="/index/index/index.html?lang=yn-yn" style="color:#fa855a;font-size:16px">Tiếng Việt</a></li><li  style="line-height:1.5rem"><!--<img src="/static/picture/zh-tw.jpg"/>--><a href="/index/index/index.html?lang=zh-tw" style="color:#fa855a;font-size:16px">中文繁體</a></li><li  style="line-height:1.5rem"><!--<img src="/static/picture/hg-hg.jpg"/>--><a href="/index/index/index.html?lang=hg-hg" style="color:#fa855a;font-size:16px">한국</a></li></ul></div></uni-view><uni-view data-v-6327a35e="" class="h1">Log in</uni-view></uni-view><uni-view data-v-6327a35e="" class="main"><uni-view data-v-6327a35e="" class="input_box"><uni-view data-v-6327a35e="" class="form"><uni-view data-v-6327a35e="" class="login_input"><uni-input data-v-6327a35e="" class="input_mobile"><div class="uni-input-wrapper"><div class="uni-input-placeholder input-placeholder" data-v-6327a35e=""></div><input maxlength="140" step="" name="phone" enterkeyhint="done" autocomplete="off" type="text" class="uni-input-input" placeholder="Account"><!----></div></uni-input></uni-view><uni-view data-v-6327a35e="" class="login_input"><uni-input data-v-6327a35e=""><div class="uni-input-wrapper"><div class="uni-input-placeholder input-placeholder" data-v-6327a35e=""></div><input maxlength="140" step="" name="password" enterkeyhint="done" autocomplete="off" type="password" class="uni-input-input" placeholder="Password"><!----></div></uni-input></uni-view></uni-view></uni-view><uni-view data-v-6327a35e="" class="btn-group"><uni-view data-v-6327a35e="" class="sign-btn acea-row row-middle row-center" onclick="denglu(this)"><uni-text data-v-6327a35e=""><span >Log in</span></uni-text></uni-view><uni-view data-v-6327a35e="" class="reg-btn acea-row row-middle row-center" onclick="location='/index/index/regHtml.html'"><uni-text data-v-6327a35e=""><span>Register a new account</span></uni-text></uni-view><uni-view data-v-6327a35e="" class="reg-btn acea-row row-middle row-center" onclick="location='/index/index/forgot'"><uni-text data-v-6327a35e=""><span>Forgot password</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-30282a05="" data-v-4799d458="" data-v-6327a35e="" class="u-popup"><!----><!----></uni-view></uni-view></uni-page-body></uni-page-wrapper></uni-page><!----></uni-app><div style="display:none"><!-- Global site tag (gtag.js) - Google Analytics --><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-TGDP23DWDF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TGDP23DWDF');
+</script></div></body><script type="text/javascript">
+		function denglu(e){
+            var phone = $('input[name="phone"]').val();//手机号
+            var password = $('input[name="password"]').val();//密码
+            var code = $('input[name="code"]').val();//验证码
+            if(!phone){
+                layer.msg('Please input Username');return;
+            }if(!password){
+                layer.msg('Please enter your password');return;
+            }
+            // if(!code){
+            //     layer.msg('Please enter the image verification code');return;
+            // }
+            $(e).attr('disabled','disabled');//提交ajax时禁用按钮
+            $.ajax({
+                type:"POST",
+                url:"/index/index/login.html",
+                data:{
+                    account:phone,
+                    pwd:password,
+                    code:code
+                },
+                //请求成功
+                success : function(result) {
+                    console.log(result)
+                    if(result.code==1){
+                        location.href="/index/index/index.html";
+                        return;
+                    }else{
+                        $('.codeimg').attr('src',"/captcha.html?t="+ Math.random())
+                        layer.msg(result.info);
+                    }
+                    $(e).removeAttr('disabled');//提交成功时启用按钮
+                },
+                //请求失败，包含具体的错误信息
+                error : function(e){
+                    console.log(e.status);
+                    console.log(e.responseText);
+                }
+            });
+        }
+	
+		$('.lang_btn').click(function(){
+             $('.language').toggle();
+         })
+	</script></html>

@@ -1,0 +1,247 @@
+
+<!DOCTYPE html><html><head><script type="text/javascript">
+	function initFontSize(){
+		var WIDTH_ = document.getElementsByTagName('html')[0].clientWidth;
+		WIDTH_ = WIDTH_>1920?1920:WIDTH_;
+		if(WIDTH_<700){
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 750 * 100)+'px';
+		}else{
+			document.getElementsByTagName('html')[0].style.fontSize = (WIDTH_ / 1920 * 100)+'px';
+		}
+	}
+	window.onresize = function(){
+		initFontSize()
+	}
+	initFontSize()
+	/*
+	setInterval(function(){
+		initFontSize()
+	},50)
+	*/
+</script><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><title>Usdt market</title><link rel="stylesheet" type="text/css" href="../../static/js/layui/css/layui.css"/><link rel="stylesheet" type="text/css" href="../../staticH5/css/style.css?v=123"/><script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script><script src="../../static/js/layui/layui.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
+	var $ = layui.$;
+</script><script>function tfalert(content,title,confirm,type,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	type = type||1;
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg"></div>\
+						<div class="typeStatus type'+type+'"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDing">'+confirm+'</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+function tfConfirm(content,title,confirm,callBack){
+	title = title||"Hint";
+	confirm = confirm||"Confirm";
+	var rdm = (Math.random()+'').replace(/0./g,'');
+	var html_ = '<div class="tfZheZhao" id="tfZheZhao'+rdm+'" style="display:none">\
+					<div class="tfAlertBox">\
+						<div class="closeImg" style="display:none;"></div>\
+						<div class="tfAlertBoxTitle">'+title+'</div>\
+						<div class="tfAlertBoxContent">'+content+'</div>\
+						<div class="tfAlertBoxQueDingBox">\
+							<div class="tfAlertBoxQueDing0">Cancel</div>\
+							<div class="tfAlertBoxQueDing1">'+confirm+'</div>\
+						</div>\
+					</div>\
+				</div>';
+	$('body').append(html_);
+	$('body').find('#tfZheZhao'+rdm).fadeIn(300);
+	$("body").on('click','#tfZheZhao'+rdm+' .closeImg',function(){
+		$('body').find('#tfZheZhao'+rdm).fadeOut(300);
+		setTimeout(function(){
+			$('body').find('#tfZheZhao'+rdm).remove();
+		},300)
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing0',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+	})
+	$("body").on('click','#tfZheZhao'+rdm+' .tfAlertBoxQueDing1',function(){
+		$("body").find('#tfZheZhao'+rdm+' .closeImg').click();
+		if(callBack){
+			callBack()
+		}
+	})
+}
+</script><script src="../../staticH5/js/jquery.qrcode.js"></script><script type="text/javascript">
+	layer.msg = function(content){
+		tfalert(content,"Hint","Confirm","2",function(){
+			
+		});
+	}
+	//发送邮箱
+	function sendArray(data,callfunc){
+		layer_load = layer.load();
+		$.ajax({
+			url:'/index/index/mail.html',
+			type:'post',
+			data:data,
+			success : function(result) {
+				layer.close(layer_load);
+				if(callfunc){
+					callfunc();
+				}
+				// location.reload()
+			},
+			//请求失败，包含具体的错误信息
+			error : function(e){
+				layer.close(layer_load);
+				layer.msg('网络连接超时');
+			}
+		})
+	}
+</script><link rel="stylesheet" type="text/css" href="../../staticH5/css/pay.css"/></head><body><div class="headerBox"><div class="headerBoxTitle">Usdt market</div><div class="headerBoxRightBox"><img src="../../staticH5/img/touxiang.png" class="headerBoxRightBoxTouXiang"><div class="headerBoxRightBoxName">AUFD36</div><div class="headerBoxRightBoxhydj"><span></span>vip2<img src="../../staticH5/img/vipIcon.png" class="vipIcon"></div><div class="huishu"></div><a class="headerBoxRightBoxhydj messageBox" href="/index/index/send.html"><!-- <img src="../../staticH5/img/znx.png" class="messageBoxImg"> -->Notice</a><div class="huishu"></div><!--<a class="tuichuBox" href="/index/index/logout.html"><img src="../../staticH5/img/loginOut.png" >Quit</a>--><style>
+                    .language{ position: absolute; left: 0;z-index: 999;background: #fff;padding: 5px 0 0 5px;}
+                    .language li img{ float:left;}
+                    .language li a{ color:#333;}
+                    .language li.active a{ color:#7670d9;}
+                </style><div class="tuichuBox" style="position:relative;width: 1.6rem;"><img src="../../static/picture/en-us.jpg"/><div class="lang_btn">English</div><ul class="language" style="display:none"><li class="active"><img src="../../static/picture/en-us.jpg"/><a href="/index/index/index.html?lang=en-us">English</a></li><li ><img src="../../static/picture/pt-pt.jpg"/><a href="/index/index/index.html?lang=pt-pt">portugu&ecirc;s</a></li><li ><img src="../../static/picture/es-es.jpg"/><a href="/index/index/index.html?lang=es-es">espa&ntilde;ol</a></li><li ><img src="../../static/picture/tr-tr.jpg"/><a href="/index/index/index.html?lang=tr-tr">T&uuml;rkiye</a></li><li ><img src="../../static/picture/yn-yn.jpg"/><a href="/index/index/index.html?lang=yn-yn">Tiếng Việt</a></li><li ><img src="../../static/picture/zh-tw.jpg"/><a href="/index/index/index.html?lang=zh-tw">中文繁體</a></li><li ><img src="../../static/picture/hg-hg.jpg"/><a href="/index/index/index.html?lang=hg-hg">한국</a></li></ul></div></div><div class="menuBtnBox">
+			    More Features
+			</div></div><div class="LeftMenuBox"><div class="logoBox" style="background-image: url(/upload/20220325173904.logo.png);"></div><div class="LeftMenuBox-Main"><a class="LeftMenuBox-Main-Li" href="/index/index/index.html"><img src="../../staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Home</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/chongzhi.html"><img src="../../staticH5/img/icon/leftIcon2.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon2-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Recharge</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/tixian.html"><img src="../../staticH5/img/icon/leftIcon3.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon3-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Withdraw</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanzhang.html"><img src="../../staticH5/img/icon/leftIcon4.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon4-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Member Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shengji.html"><img src="../../staticH5/img/icon/leftIcon5.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon5-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Membership Upgrade</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/zhuanyi.html"><img src="../../staticH5/img/icon/leftIcon6.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon6-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Asset Transfer</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/send.html"><img src="../../staticH5/img/icon/leftIcon8.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon8-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Customer Service</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/shuoming.html"><img src="../../staticH5/img/icon/leftIcon9.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Common Problem</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/wailian.html"><img src="../../staticH5/img/icon/leftIcon1.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon1-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Friendship Link</div></a><a class="LeftMenuBox-Main-Li" href="/index/index/logout.html"><img src="../../staticH5/img/loginOut.png" class="LeftMenuBox-Main-Li-icon"><img src="../../staticH5/img/icon/leftIcon9-1.png" class="LeftMenuBox-Main-Li-icon"><div class="LeftMenuBox-Main-Li-label">Quit</div></a></div></div><script type="text/javascript">
+			$('.menuBtnBox').on('click',function(){
+				if($('.LeftMenuBox').hasClass('active')){
+					$('.LeftMenuBox').removeClass('active');
+				}else{
+					$('.LeftMenuBox').addClass('active');
+				}
+			})
+			$('.LeftMenuBox-Main-Li').on('click',function(){
+				$('.LeftMenuBox').removeClass('active');
+			})
+		</script><script type="text/javascript">
+			$('.LeftMenuBox-Main-Li[href="/index/index/chongzhi.html"]').addClass("active");
+			$('.lang_btn').click(function(){
+                 $('.language').toggle();
+             })
+		</script><div class="bodyMain"><div class="bodyMainLeft"><div class="bodyMain1"><div class="bodyMain1Left"><div><img src="../../staticH5/img/pay/payIcon1.png">account：AUFD36</div><div><img src="../../staticH5/img/pay/payIcon2.png">Available Balance：736.9 usdt</div><!--                <div><img src="../../staticH5/img/pay/payIcon3.png">年度提币额度剩余：633030.00usdt</div> --></div></div><div class="bodyMain2"><div class="tfTitle">Recharge</div><form class="layui-form" action="" enctype="multipart/form-data"><div class="layui-form-item"><label class="layui-form-label">Wallet Address</label><div class="layui-input-block"><div class="layui-input"><font color="#FD4163">TRC20 address：TSiYeEyJLWEqYJJvxKFnxbEZkBNGL9ztdD</font></div><div id="trc20" style="height:auto;width:150px" class="bodyMain1Right"></div></div><div class="layui-input-block"><div class="layui-input"><font color="#FD4163">ERC20 address：0x912E018C8432974f72cAe559DC440b6DB9Dc60D7</font></div><div id="erc20" style="height:auto;width:150px" class="bodyMain1Right"></div></div></div><div class="layui-form-item"><label class="layui-form-label">Recharge amount</label><div class="layui-input-block"><input type="number" name="money" required lay-verify="required"
+                               placeholder="Recharge amount1-5000000 usdt" autocomplete="off" class="layui-input czjine"></div></div><div class="layui-form-item"><label class="layui-form-label">Recharge Certificate</label><div class="layui-input-block"><div class="yulantuBox"><input type="text" name="img" class="layui-input yulantuInput" lay-verify="required"/><img src="../../staticH5/img/pay/uploadImg.png" class="yulantu"><input type="file" name="img" id="inputfile" onchange="imgChange(this)" autocomplete="off" style="display:none"><input type="hidden" name="img" id="image" autocomplete="off" ></div></div></div><div class="layui-form-item"><label class="layui-form-label">Transaction Key</label><div class="layui-input-block"><input type="password" name="password" required lay-verify="required"
+                               placeholder="Enter your transaction key" autocomplete="off" class="layui-input password"></div></div><div class="layui-form-item"><button class="layui-btn" type="button" id="tijiao">Submit top up</button></div><div class="layui-form-item"><div class="layui-input-block"><div class="shuomingBox"><div class="form-group col-sm-12"><div for="firstname" class="col-sm-2 control-label" style="color:#6046ff; width:5rem;">After you successfully transfer USDT to the specified wallet address, you need to upload the screenshot to apply for recharge, the following is an example:</div><div class="col-sm-3" style="line-height:34px"><img style="height:auto;width:100%" src="../../static/picture/61b3341993139.jpeg"><br><img style="height:auto;width:100%" src="../../static/picture/61b2aa2e169ca.png"><br><img style="height:auto;width:100%" src="../../static/picture/61b079589e982.jpg"><br></div></div></div></div></div></form></div></div><div class="bodyMain3"><div class="tfTitle">Recharge record</div><table class="layui-table"><thead><tr><th>Amount(usdt)</th><th>Condition</th><th>Transaction Hour</th></tr></thead><tbody><tr><td>20</td><td>finish</td><td>2022-12-01 03:41:11</td></tr></tbody></table></div></div><script type="text/javascript">jQuery('#erc20').qrcode({
+    render: "canvas", //也可以替换为table
+    width: 150,
+    height: 150,
+    text: "0x912E018C8432974f72cAe559DC440b6DB9Dc60D7"
+});
+
+jQuery('#trc20').qrcode({
+    render: "canvas", //也可以替换为table
+    width: 150,
+    height: 150,
+    text: "TSiYeEyJLWEqYJJvxKFnxbEZkBNGL9ztdD"
+});
+$('.yulantu').click(function(){
+    $('#inputfile').trigger('click');
+})
+    var img;
+    function imgChange(e) {
+        var filePath = $(e).val(), //获取到input的value，里面是文件的路径
+            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+            src = window.URL.createObjectURL(e.files[0]); //转成可以在本地预览的格式
+        // 检查是否是图片
+        if (!fileFormat.match(/.png|.jpg|.jpeg/)) {
+            layer.msg('/Upload error, the file format must be: png/jpg/jpeg.html');
+            return;
+        } else {
+            $('.yulantu').attr('src', src).show();
+        }
+        
+        var reader = new FileReader();
+        reader.readAsDataURL(e.files[0]);
+        reader.onload = function(){
+            $('#image').val(reader.result);
+            
+            let image = new Image()     //新建一个img标签（不嵌入DOM节点，仅做canvas操作)
+            image.src = reader.result    //让该标签加载base64格式的原图
+            image.onload = function() {    //图片加载完毕后再通过canvas压缩图片，否则图片还没加载完就压缩，结果图片是全黑的
+                let canvas = document.createElement('canvas'), //创建一个canvas元素
+                context = canvas.getContext('2d'),    //context相当于画笔，里面有各种可以进行绘图的API
+                imageWidth = image.width / 2,    //压缩后图片的宽度，这里设置为缩小一半
+                imageHeight = image.height / 2,    //压缩后图片的高度，这里设置为缩小一半
+                data = ''    //存储压缩后的图片
+                canvas.width = imageWidth    //设置绘图的宽度
+                canvas.height = imageHeight    //设置绘图的高度
+                
+                //使用drawImage重新设置img标签中的图片大小，实现压缩。drawImage方法的参数可以自行查阅W3C
+                context.drawImage(image, 0, 0, imageWidth, imageHeight)
+                
+                //使用toDataURL将canvas上的图片转换为base64格式
+                data = canvas.toDataURL('image/jpeg')
+                $('.yulantu').attr('src', data).show();
+                //console.log(data);
+                //将压缩后的图片显示到页面上的img标签
+                //document.getElementById('img').src = data
+            }
+
+        };
+    }
+
+    $('#tijiao').on('click', function () {
+        var money = $('.czjine').val();
+        var file = $('#inputfile')[0];
+        var password = $('.password').val();//密码
+        if (!money || money < 1 /*|| money > 1000000*/) {
+            layer.msg('Minimum deposit starting from 1 Tether');
+            return;
+        }
+        if (!file.value) {
+            layer.msg('Please upload payment voucher');
+            return;
+        }
+        if(!password){
+            layer.msg('Please enter the key');
+            return;
+        }
+        
+        var th = $(this);
+        
+        $(this).attr('disabled', 'disabled').val('submitting...');
+        
+        $.ajax({
+            type:"POST",
+            url:"/index/index/chongzhi.html",
+            data:$(this).parents('form').serialize(),
+            //请求成功
+            success : function(result) {
+                console.log(result)
+                if(result.code==1){
+                    tfalert("",result.info,"Confirm","1",function(){
+                        location.reload()
+					});
+                }else{
+                    layer.msg(result.info);
+                }
+                th.removeAttr('disabled').val('Submit top up');//提交成功时启用按钮
+            },
+            //请求失败，包含具体的错误信息
+            error : function(e){
+                console.log(e.status);
+                console.log(e.responseText);
+            }
+        });
+        //$(this).parents('form').submit();
+    })
+</script><div style="display:none"><!-- Global site tag (gtag.js) - Google Analytics --><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-TGDP23DWDF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TGDP23DWDF');
+</script></div></body></html>
